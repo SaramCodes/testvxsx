@@ -694,7 +694,7 @@ html, body {
   .match-found h2 {
     font-size: 20px;
   }
-  #ct-circle-container {
+  .match-found-timer #ct-circle-container {
     height: 35px;
     width: 35px;
   }
