@@ -8,6 +8,11 @@
   overflow: hidden;
 }
 
+body{
+  height: 100%;
+  position: relative;
+}
+
 .custom-game-btn:hover > .custom-game-btn-bg {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
