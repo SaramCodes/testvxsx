@@ -51,6 +51,37 @@ $(document).ready(function(){
 
         if(swiper === undefined){
           swiper =   new Swiper('.swiper-container', {
+
+
+                on: {
+                    slideChange: function(){
+                    
+                        if($(".pm-nav").css("margin-bottom") !== "5px") return;
+                        
+                        var slideToMutate = this.slides[swiper.activeIndex];
+                        
+                        //now do all the slecting and highlighting code the same as activeslide but slightly different to match this method
+
+                        $(".swiper-slide").each(function(){
+                            $(this).removeClass("swiper-slide-show");
+                        })
+                        
+                        // add active to the current slide
+                        
+                        $(slideToMutate).addClass("swiper-slide-show");
+                
+                
+                        $(".versus-type").each(function(){
+                            $(this).removeClass("versus-type-selected");
+                        })
+                
+                        var tempCheckBox1 = $(slideToMutate).children('.versus-type-container').children()[0];
+                        $(tempCheckBox1).addClass("versus-type-selected");
+                        
+
+                    }
+                },
+
                 slidesPerView: 1,
                 spaceBetween: 0,
                 touchEventsTarget: "container",
@@ -280,18 +311,6 @@ $(".match-found-timer").circletimer({
 
 //testing
 
-// var $div = $(".swiper-slide");
-// var observer = new MutationObserver(function(mutations) {
-//   mutations.forEach(function(mutation) {
-//     if (mutation.attributeName === "class") {
-//       var attributeValue = $(mutation.target).prop(mutation.attributeName);
-//       console.log("Class attribute changed to:", attributeValue);
-//     }
-//   });
-// });
-// observer.observe($div[0], {
-//   attributes: true
-// });
 
 
 //testing
