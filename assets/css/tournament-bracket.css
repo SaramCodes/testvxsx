@@ -1,0 +1,145 @@
+/* line 4, ../scss/tournament-bracket.scss */
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  float: left;
+  /*p{
+    padding: 15px 20px 15px 20px;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid green;
+    border-radius: 3px;
+    min-width: 150px;
+  }*/ }
+  /* line 20, ../scss/tournament-bracket.scss */
+  .item-parent {
+    position: relative;
+    margin-left: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /*span{
+      position: relative;
+      background-color: #6ab961;
+      padding: 5px 10px;
+      left: -15px;
+      color:#fff;
+    }*/ }
+    /* line 33, ../scss/tournament-bracket.scss */
+    .item-parent:after {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 1px;
+      left: 0;
+      top: 50%;
+      background-color: #c2c2c0;
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%); }
+  /* line 44, ../scss/tournament-bracket.scss */
+  .item-childrens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  /* line 49, ../scss/tournament-bracket.scss */
+  .item-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative; }
+    /* line 56, ../scss/tournament-bracket.scss */
+    .item-child:before {
+      content: '';
+      position: absolute;
+      background-color: #c2c2c0;
+      right: 15px;
+      top: 50%;
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+      width: 40px;
+      height: 1px; }
+    /* line 66, ../scss/tournament-bracket.scss */
+    .item-child:after {
+      content: '';
+      position: absolute;
+      background-color: #c2c2c0;
+      right: -25px;
+      height: calc(50% + 22px);
+      width: 1px;
+      top: 50%; }
+    /* line 76, ../scss/tournament-bracket.scss */
+    .item-child:last-child:after {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%); }
+    /* line 80, ../scss/tournament-bracket.scss */
+    .item-child:only-child:after {
+      display: none; }
+
+/* line 85, ../scss/tournament-bracket.scss */
+.item-parent-inner img, .item-parent-inner p, .item-parent-inner span {
+  display: inline-block;
+  margin: 0; }
+
+/* line 89, ../scss/tournament-bracket.scss */
+.item-parent-inner img {
+  width: 30px; }
+
+/* line 92, ../scss/tournament-bracket.scss */
+.item-parent-inner {
+  border: 2px solid #c2c2c0;
+  border-radius: 3px;
+  padding: 10px 5px;
+  width: 150px; }
+
+/* line 98, ../scss/tournament-bracket.scss */
+.item-parent-inner.green {
+  border: 2px solid #6ab961; }
+
+/* line 101, ../scss/tournament-bracket.scss */
+.item-parent-inner p {
+  font-weight: bold;
+  color: #4f4f4f;
+  margin-left: 10px; }
+
+/* line 106, ../scss/tournament-bracket.scss */
+.item-parent-inner span {
+  position: absolute;
+  right: -15px;
+  background-color: #c2c2c0;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 3px; }
+
+/* line 114, ../scss/tournament-bracket.scss */
+.item-parent-inner.green span {
+  background-color: #6ab961; }
+
+@media (max-width: 1200px) {
+  /* line 118, ../scss/tournament-bracket.scss */
+  .tournament-wrapper {
+    overflow-x: scroll; } }
+
+/*# sourceMappingURL=tournament-bracket.css.map */
