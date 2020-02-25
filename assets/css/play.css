@@ -1,3 +1,8 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 .custom-game-btn {
   position: absolute;
   height: 40px;
@@ -6,11 +11,6 @@
   width: 100px;
   cursor: pointer;
   overflow: hidden;
-}
-html, body{
-  margin: 0;
-  height: 100%;
-  max-height: 100%;
 }
 
 .custom-game-btn:hover > .custom-game-btn-bg {
@@ -60,13 +60,13 @@ html, body{
   display: -ms-flexbox;
   display: flex;
   opacity: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1200;
+  z-index: 20000;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -82,9 +82,9 @@ html, body{
   height: 90%;
   width: 80%;
   max-width: 1200px;
-  max-height: 1200px;
+  max-height: 700px;
   position: relative;
-  padding: 20px 50px;
+  padding: 10px 15px;
 }
 
 .finding-match-window {
@@ -134,23 +134,42 @@ html, body{
   position: relative;
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pm-nav {
-  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 .pm-nav p {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 400;
   color: #fff !important;
 }
 
 .swiper-container {
   height: 430px;
-  padding-bottom: 70px;
   width: 100%;
   cursor: pointer;
 }
@@ -309,10 +328,16 @@ html, body{
 }
 
 .slide-game {
-  padding: 0 0 50px 0;
+  padding: 0 0 45px 0;
   background: #2e3136;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
+}
+
+.slide-game-inner {
+  width: 190px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .game-img {
@@ -323,21 +348,21 @@ html, body{
 }
 
 .game-title {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
   text-transform: capitalize;
   text-align: center;
   color: #fff;
   text-shadow: 4px 2px 5px black;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 
 .confirm-btn, .cancel-btn {
-  padding: 5px 40px;
+  padding: 3px 40px;
   color: #fff;
-  font-size: 20px;
+  font-size: 16px;
   text-transform: capitalize;
-  margin: auto;
   display: inline-block;
   cursor: pointer;
 }
@@ -350,14 +375,28 @@ html, body{
   background: #ff3434;
 }
 
+.game-confirm-btn-container {
+  width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .game-confirm-btn {
-  padding: 5px 40px;
+  width: 170px;
+  height: 30px;
+  line-height: 30px;
   background: #00b400;
   color: #fff;
   font-size: 20px;
   text-transform: capitalize;
-  margin: auto;
-  display: inline-block;
+  display: block;
   cursor: pointer;
 }
 
@@ -388,7 +427,7 @@ html, body{
 }
 
 .versus-type {
-  padding: 5px 10px;
+  padding: 8px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,8 +459,8 @@ html, body{
 }
 
 .versus-square {
-  height: 20px;
-  width: 20px;
+  height: 17px;
+  width: 17px;
   position: relative;
   border: 2px solid #fff;
   margin-right: 20px;
@@ -430,8 +469,8 @@ html, body{
 .versus-square div {
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
-  height: 60%;
-  width: 60%;
+  height: 55%;
+  width: 55%;
   background: transparent;
   position: absolute;
   top: 50%;
@@ -516,16 +555,30 @@ html, body{
   width: 80%;
   max-width: 400px;
   background: #222428;
-  padding: 50px 0 50px 0;
+  padding: 20px 0 20px 0;
   text-align: center;
   -webkit-box-shadow: 5px 5px 0 0 black;
           box-shadow: 5px 5px 0 0 black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .match-found h2 {
   font-weight: 400;
   padding: 0 0 20px 0;
   font-size: 25px;
+  width: 100%;
   text-transform: uppercase;
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.479);
@@ -538,6 +591,8 @@ html, body{
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  padding: 0 15px;
 }
 
 .match-found-timer {
@@ -545,9 +600,8 @@ html, body{
 }
 
 .match-found-timer #ct-circle-container {
-  height: 50px;
-  width: 50px;
-  margin: auto;
+  height: 40px;
+  width: 40px;
 }
 
 .match-found-timer #ct-circle-container svg circle {
@@ -565,20 +619,8 @@ html, body{
   display: none;
 }
 
-.close-play-match {
-  position: absolute;
-  top: 15px;
-  right: 50px;
-  z-index: 1;
-  height: 30px;
-  width: 30px;
+.close-match-window {
   cursor: pointer;
-  text-align: center;
-}
-
-.close-play-match i {
-  cursor: pointer;
-  line-height: 30px;
   font-size: 20px;
   color: #fff;
 }
@@ -635,9 +677,74 @@ html, body{
   }
 }
 
-@media screen and (max-width: 1366px) {
-  .swiper-container {
-    padding: 0 0 30px 0;
+@media screen and (max-height: 414px) {
+  .pm-main-window-content {
+    display: block;
+  }
+  .game-confirm-btn-container {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .game-confirm-btn {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 514px) {
+  .match-found h2 {
+    font-size: 20px;
+  }
+  #ct-circle-container {
+    height: 35px;
+    width: 35px;
+  }
+  .match-found-timer {
+    margin: 15px 0;
+  }
+  .confirm-btn, .cancel-btn {
+    padding: 2px 30px;
+  }
+  .pm-nav {
+    margin-bottom: 5px;
+  }
+  .pm-nav p {
+    font-size: 13px;
+  }
+  .close-match-window {
+    font-size: 16px;
+  }
+  .game-img {
+    max-width: 175px;
+    width: 175px;
+  }
+  .slide-game-inner {
+    width: 175px;
+  }
+  .versus-type-container {
+    margin: 20px auto 0 auto;
+  }
+  .game-confirm-btn-container {
+    width: 110px;
+  }
+  .game-confirm-btn {
+    font-size: 16px;
+    height: 45px;
+    width: 110px;
+    line-height: 45px;
+  }
+  .versus-type span {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .pm-main-window, .finding-match-window {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    max-height: 100%;
+    max-width: 100%;
   }
 }
 
@@ -660,23 +767,11 @@ html, body{
     font-size: 20px;
     width: 165px;
   }
-  .versus-type-container {
-    margin: 20px auto;
-  }
 }
 
 @media screen and (max-width: 600px) {
-  .confirm-btn, .cancel-btn {
-    font-size: 15px;
-  }
   .match-found {
     width: 90%;
-  }
-  .pm-main-window, .finding-match-window {
-    padding: 20px;
-    height: 100%;
-    width: 100%;
-    border-radius: 0;
   }
   .close-find-match {
     right: 10px;

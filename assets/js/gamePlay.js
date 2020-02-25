@@ -65,11 +65,11 @@ $(document).ready(function(){
                 },
 
                 breakpoints:{
-                    920: {
+                    780: {
                         slidesPerView: 3
                     },
 
-                    720: {
+                    680: {
                         slidesPerView: 2
                     }
                 }
@@ -129,7 +129,9 @@ $(document).ready(function(){
         })
         
         // add active to the current slide
-        $(this).parent().addClass("swiper-slide-show");
+        // $(this).parent().addClass("swiper-slide-show");
+        // console.log()
+        $($(this).parent().parent()).addClass("swiper-slide-show");
 
 
         $(".versus-type").each(function(){
@@ -137,7 +139,7 @@ $(document).ready(function(){
         })
 
         //select the first checbox of the selected slide.
-        var tempCheckBox = $($(this).parent().children(".versus-type-container")).children(".versus-type")[0];
+        var tempCheckBox = $($($(this).parent().parent()).children(".versus-type-container")).children(".versus-type")[0];
         $(tempCheckBox).addClass("versus-type-selected");
         
         
@@ -233,7 +235,7 @@ $(document).ready(function(){
     });
 
     //active slide
-    $(".slide-game").click(activeSlide);
+    $(".slide-game-inner").click(activeSlide);
     $(".versus-type").click(activeVersus);
 
     //change to finding match winndow
@@ -276,15 +278,23 @@ $(".match-found-timer").circletimer({
 })
 
 
+//testing
+
+// var $div = $(".swiper-slide");
+// var observer = new MutationObserver(function(mutations) {
+//   mutations.forEach(function(mutation) {
+//     if (mutation.attributeName === "class") {
+//       var attributeValue = $(mutation.target).prop(mutation.attributeName);
+//       console.log("Class attribute changed to:", attributeValue);
+//     }
+//   });
+// });
+// observer.observe($div[0], {
+//   attributes: true
+// });
 
 
+//testing
 
 
-
-
-
-
-
-
-    
 });
