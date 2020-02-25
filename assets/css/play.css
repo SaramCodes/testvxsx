@@ -103,10 +103,6 @@ html, body {
   text-align: center;
 }
 
-.pm-main-window {
-  overflow-y: auto;
-}
-
 .fade-out {
   -webkit-animation-name: fadeOut;
           animation-name: fadeOut;
@@ -687,6 +683,9 @@ html, body {
   }
   .game-confirm-btn {
     margin: auto;
+  }
+  .pm-main-window {
+    overflow-y: auto;
   }
 }
 
