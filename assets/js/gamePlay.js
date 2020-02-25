@@ -57,7 +57,7 @@ $(document).ready(function(){
                     slideChange: function(){
                     
                         if($(".pm-nav").css("margin-bottom") !== "5px") return;
-                        
+
                         var slideToMutate = this.slides[swiper.activeIndex];
                         
                         //now do all the slecting and highlighting code the same as activeslide but slightly different to match this method
@@ -79,6 +79,31 @@ $(document).ready(function(){
                         $(tempCheckBox1).addClass("versus-type-selected");
                         
 
+                    },
+
+                    resize: function(){
+
+                        if($(".pm-nav").css("margin-bottom") !== "5px") return;
+
+                        var slideToMutate = this.slides[swiper.activeIndex];
+                        
+                        //now do all the slecting and highlighting code the same as activeslide but slightly different to match this method
+
+                        $(".swiper-slide").each(function(){
+                            $(this).removeClass("swiper-slide-show");
+                        })
+                        
+                        // add active to the current slide
+                        
+                        $(slideToMutate).addClass("swiper-slide-show");
+                
+                
+                        $(".versus-type").each(function(){
+                            $(this).removeClass("versus-type-selected");
+                        })
+                
+                        var tempCheckBox1 = $(slideToMutate).children('.versus-type-container').children()[0];
+                        $(tempCheckBox1).addClass("versus-type-selected");
                     }
                 },
 
